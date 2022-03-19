@@ -12,6 +12,6 @@ The pomodoro timer is configured for a 25 min study/work session and a 5 min bre
 
 This SPA page has a login feature where in you need to login using your Google Account. Upon successful login, you are taken to the timer page. Here, you can start, pause and reset the timer. Upon completion of the 25 min study/work session timer, a 5 min break timer automatically starts.
 
-The app lands on the '/home' path and any manual changes to that path is redirected back to the '/home' page. After successful login, the path changes to '/pomodoro' and any manual path changes at that page results in a user logout and redirection to the '/home' page. Users can manually logout using the logout button on the top right corner of the '/pomodoro' page.
+The app lands on the '/home' page and any manual changes to the path is redirected back to the '/home' page. After successful login, the path changes to '/pomodoro' and any manual path changes at that page results in a user logout and redirection to the '/home' page. Users can manually logout using the logout button on the top right corner of the '/pomodoro' page.
 
 Check out the [demo]() here.
