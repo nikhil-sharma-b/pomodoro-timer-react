@@ -1,0 +1,38 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 47, 47);
+  width: 85%;
+  height: 90vh;
+  border-radius: 5rem;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.timer p {
+  color: white;
+}
+
+.actionBtn,
+.logoutBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 3.5rem;
+  color: white;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.actionBtn:hover,
+.logoutBtn:hover {
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.logoutBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+}

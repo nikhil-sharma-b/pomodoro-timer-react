@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import styles from "./App.module.css";
+import AuthContext from "./store/auth-context";
+import { Navigate, Route, Routes } from "react-router";
+import HomePage from "./pages/HomePage";
+import PomodoroPage from "./pages/PomodoroPage";
 
-function App() {
+const App = function () {
+  const authCtx = useContext(AuthContext);
+  const isLoggedIn = authCtx.isLoggedIn;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={styles.app}>
+      <Routes>
+        <Route path="/home" element={!isLoggedIn && <HomePage />} />
+        <Route
+          path="/pomodoro"
+          element={isLoggedIn ? <PomodoroPage /> : <Navigate to="/home" />}
+        />
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
+    </main>
   );
-}
+};
 
 export default App;
