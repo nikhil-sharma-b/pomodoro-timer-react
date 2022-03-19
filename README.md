@@ -14,4 +14,4 @@ This SPA page has a login feature where in you need to login using your Google A
 
 The app lands on the '/home' page and any manual changes to the path is redirected back to the '/home' page. After successful login, the path changes to '/pomodoro' and any manual path changes at that page results in a user logout and redirection to the '/home' page. Users can manually logout using the logout button on the top right corner of the '/pomodoro' page.
 
-Check out the [demo]() here.
+Check out the [demo](https://adoring-fermat-7d147d.netlify.app/home) here.
